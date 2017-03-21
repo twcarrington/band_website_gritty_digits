@@ -7,7 +7,7 @@ function TopBar(props) {
     <div>
       <h1>The Gritty Digits</h1>
 
-      <table align="center">
+      <table>
         <tr>
           <td>Home</td>
           <td>Music</td>
