@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// be aware that app.css is no longer imported here
 
 function TopBar(props) {
   return (
