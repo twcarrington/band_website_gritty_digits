@@ -1,22 +1,18 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
 
 function TopBar(props) {
   return (
-    <div>
-      <h1>The Gritty Digits</h1>
+    <div className="container center-align">
+      <h1 className="row">The Gritty Digits</h1>
 
-      <table>
-        <tr>
-          <td>Home</td>
-          <td>Music</td>
-          <td>Shows</td>
-          <td>Videos</td>
-          <td>Photos</td>
-          <td>Contact</td>
-        </tr>
-      </table>
+      <div className="row">
+        <div className="col s2">Home</div>
+        <div className="col s2">Music</div>
+        <div className="col s2">Shows</div>
+        <div className="col s2">Videos</div>
+        <div className="col s2">Photos</div>
+        <div className="col s2">Contact</div>
+      </div>
     </div>
   );
 }
@@ -25,9 +21,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-
         <div className="TopBar">
-          <img src={logo} className="App-logo" alt="logo" />
           <TopBar/>
         </div>
       </div>
