@@ -1,4 +1,6 @@
+// if you've downloaded this repo, note that the index.js is being ignored by git because that's where my firebase configuration keys are
 import React, { Component } from 'react';
+// be aware that app.css is no longer imported here
 
 function TopBar(props) {
   return (
