@@ -1,22 +1,16 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import 
 
 function TopBar(props) {
   return (
     <div>
-      <h1>The Gritty Digits</h1>
+      <h1 className="row">The Gritty Digits</h1>
 
-      <table>
-        <tr>
-          <td>Home</td>
-          <td>Music</td>
-          <td>Shows</td>
-          <td>Videos</td>
-          <td>Photos</td>
-          <td>Contact</td>
-        </tr>
-      </table>
+      <div className="row">
+        <div className="col s6 m6 l6">Home</div>
+        <div className="col s6 m6 l6">Music</div>
+      </div>
     </div>
   );
 }
@@ -25,9 +19,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-
         <div className="TopBar">
-          <img src={logo} className="App-logo" alt="logo" />
           <TopBar/>
         </div>
       </div>
