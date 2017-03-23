@@ -7,12 +7,12 @@ export default class TopBar extends Component {
         <h1 className="row">The Gritty Digits</h1>
 
         <div className="row">
-          <div className="col s2">Home</div>
-          <div className="col s2">Music</div>
-          <div className="col s2">Shows</div>
-          <div className="col s2">Videos</div>
-          <div className="col s2">Photos</div>
-          <div className="col s2">Contact</div>
+          <div className="col s2 hoverable">Home</div>
+          <div className="col s2 hoverable">Music</div>
+          <div className="col s2 hoverable">Shows</div>
+          <div className="col s2 hoverable">Videos</div>
+          <div className="col s2 hoverable">Photos</div>
+          <div className="col s2 hoverable">Contact</div>
         </div>
       </div>
     );
