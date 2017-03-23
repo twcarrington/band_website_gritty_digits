@@ -8,6 +8,7 @@
 
 # production
 /build
+/Users/Tommy/gritty_digits/band_website/src/FirebaseConfig.js
 
 # misc
 .DS_Store
