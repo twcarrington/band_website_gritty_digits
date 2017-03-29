@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import TopBar from './TopBar.js';
+import BackgroundImg from './BackgroundImg.js';
 import Music from './Music.js';
 import Shows from './Shows.js';
 import Videos from './Videos.js';
@@ -12,6 +13,7 @@ export default class App extends Component {
     return (
       <div className="App">
         <TopBar/>
+        <BackgroundImg/>
         <Music/>
         <Shows/>
         <Videos/>
