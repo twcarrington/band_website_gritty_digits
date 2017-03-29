@@ -1,5 +1,41 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
+}
+
+.TopBar {
+  font-family: 'Raleway', sans-serif;
+}
+
+.TopBarItem {
+  font-family: 'Anton', sans-serif;
+}
+
+.Music {
+  background-color: lightblue;
+}
+
+.Music {
+  background-color: lightblue;
+}
+
+.Shows {
+  background-color: lightblue;
+}
+
+.Videos {
+  background-color: lightblue;
+}
+
+.Photos {
+  background-color: lightblue;
+}
+
+.Contact {
+  background-color: lightblue;
+}
+
+.parallax-container {
+  height: 1500px;
 }
