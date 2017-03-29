@@ -5,7 +5,7 @@ export default class BackgroundImg extends Component {
     return (
       <div className="BackgroundImg parallax-container">
         <div class="parallax">
-          <img src={require("/Users/Tommy/gritty_digits/band_website/public/pikmin.jpg")}/>
+          <img src={require("../public/pikmin.jpg")}/>
         </div>
       </div>
     );

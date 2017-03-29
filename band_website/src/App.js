@@ -6,8 +6,16 @@ import Shows from './Shows.js';
 import Videos from './Videos.js';
 import Photos from './Photos.js';
 import Contact from './Contact.js';
+import $ from 'jquery';
+
 
 export default class App extends Component {
+  componentDidMount() {
+    $(document).ready(function(){
+      $('.parallax').parallax();
+    });
+  }
+
   render() {
     return (
       <div className="App">
