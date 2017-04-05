@@ -10,11 +10,6 @@ import $ from 'jquery';
 
 
 export default class App extends Component {
-  componentDidMount() {
-    $(document).ready(function(){
-      $('.parallax').parallax();
-    });
-  }
 
   render() {
     return (
