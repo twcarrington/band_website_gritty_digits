@@ -6,8 +6,6 @@ import Shows from './Shows.js';
 import Videos from './Videos.js';
 import Photos from './Photos.js';
 import Contact from './Contact.js';
-import $ from 'jquery';
-
 
 export default class App extends Component {
 
