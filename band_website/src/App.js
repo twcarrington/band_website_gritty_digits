@@ -7,8 +7,8 @@ import Videos from './Videos.js';
 import Photos from './Photos.js';
 import Contact from './Contact.js';
 
-
 export default class App extends Component {
+
   render() {
     return (
       <div className="App">
