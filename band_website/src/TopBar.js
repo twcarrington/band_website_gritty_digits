@@ -6,7 +6,6 @@ export default class TopBar extends Component {
       <div className="TopBar z-depth-5 center-align">
         <div>
           <h1 className="row"> The Gritty Digits </h1>
-          <img src={require("../public/gritty_digits.jpg")}/>
         </div>
 
         <div className="row">
