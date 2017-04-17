@@ -1,15 +1,32 @@
 import React, { Component } from 'react';
 
 export default class Contact extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {visitorName: ''};
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({visitorName: event.target.visitorName});
+  }
+
+  handleSubmit(event) {
+    alert('submitted:' + this.state.visitorName);
+    event.preventDefault();
+  }
+
   render() {
     return (
-      <div id="Contact" className="Contact center-align container section scrollspy">
+      <div id="Contact" className="Contact left-align container section scrollspy">
         <h3> contact us </h3>
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <div className="row">
             <div className="input-field col s6">
-              <input id="visitor_name" type="text"></input>
-              <label for="visitor_name"> Name </label>
+              <input id="visitorName" type="text" value={this.state.visitorName} onChange={this.handleChange}></input>
+              <label for="visitorName"> Name </label>
             </div>
             <div className="input-field col s6">
               <input id="visitor_email" type="email" className="validate"></input>
