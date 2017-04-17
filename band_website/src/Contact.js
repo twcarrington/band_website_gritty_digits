@@ -3,14 +3,14 @@ import React, { Component } from 'react';
 export default class Contact extends Component {
   constructor(props) {
     super(props);
-    this.state = {visitorName: ''};
+    this.state = {visitorName: 'asfsaf'};
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(event) {
-    this.setState({visitorName: event.target.visitorName});
+    this.setState({visitorName: event.target.value});
   }
 
   handleSubmit(event) {
@@ -25,7 +25,7 @@ export default class Contact extends Component {
         <form onSubmit={this.handleSubmit}>
           <div className="row">
             <div className="input-field col s6">
-              <input id="visitorName" type="text" value={this.state.visitorName} onChange={this.handleChange}></input>
+              <input type="text" value={this.state.visitorName} onChange={this.handleChange}></input>
               <label htmlFor="visitorName"> Name </label>
             </div>
             <div className="input-field col s6">
