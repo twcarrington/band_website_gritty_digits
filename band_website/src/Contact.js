@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import firebase from "firebase";
+import {config} from "./FirebaseConfig.js";
 
 export default class Contact extends Component {
   constructor(props) {
@@ -35,7 +37,14 @@ export default class Contact extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
+    firebase.database().ref('/').set({
+      name: this.state.visitorName,
+      email: this.state.visitorEmail,
+      subject: this.state.emailSubject,
+      message: this.state.emailBody
+    });
   }
+
 
   render() {
     return (
