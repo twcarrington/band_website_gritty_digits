@@ -7,7 +7,6 @@ export default class Videos extends Component {
         <h3> videos </h3>
         <iframe
           frameBorder='0'
-          webkitAllowFullScreen
           src="https://www.youtube.com/embed/hooKVstzbz0"
           width="500"
           height="270"

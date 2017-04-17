@@ -26,25 +26,25 @@ export default class Contact extends Component {
           <div className="row">
             <div className="input-field col s6">
               <input id="visitorName" type="text" value={this.state.visitorName} onChange={this.handleChange}></input>
-              <label htmlFor="visitorName"> Name </label>
+              <label for="visitorName"> Name </label>
             </div>
             <div className="input-field col s6">
               <input id="visitor_email" type="email" className="validate"></input>
-              <label htmlFor="visitor_email" data-error="please enter an email address"> Email </label>
+              <label for="visitor_email" data-error="please enter an email address"> Email </label>
             </div>
           </div>
 
           <div className="row">
             <div className="input-field col s12">
               <input id="email_subject" type="text"></input>
-              <label htmlFor="email_subject"> Subject </label>
+              <label for="email_subject"> Subject </label>
             </div>
           </div>
 
           <div className="row left-align">
             <div className="input-field col s12">
               <textarea id="textarea" className="materialize-textarea validate" type="text"></textarea>
-              <label htmlFor="textarea" data-error="please enter a message"> Message </label>
+              <label for="textarea" data-error="please enter a message"> Message </label>
             </div>
           </div>
 
