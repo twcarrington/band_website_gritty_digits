@@ -3,18 +3,25 @@ import React, { Component } from 'react';
 export default class Contact extends Component {
   constructor(props) {
     super(props);
-    this.state = {visitorName: 'asfsaf'};
+    this.state = {
+      visitorName: '',
+      visitorEmail: ''
+    };
 
-    this.handleChange = this.handleChange.bind(this);
+    this.changeVisitorName = this.changeVisitorName.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleChange(event) {
+  changeVisitorName(event) {
     this.setState({visitorName: event.target.value});
   }
 
+  changeVisitorEmail(event) {
+    this.setState({visitorEmail: event.target.value});
+  }
+
   handleSubmit(event) {
-    alert('submitted:' + this.state.visitorName);
+    alert('submitted:' + this.state.visitorName + this.state.visitorEmail);
     event.preventDefault();
   }
 
@@ -22,15 +29,17 @@ export default class Contact extends Component {
     return (
       <div id="Contact" className="Contact left-align container section scrollspy">
         <h3> contact us </h3>
+
         <form onSubmit={this.handleSubmit}>
           <div className="row">
             <div className="input-field col s6">
-              <input type="text" value={this.state.visitorName} onChange={this.handleChange}></input>
+              <input type="text" value={this.state.visitorName} onChange={this.changeVisitorName}></input>
               <label htmlFor="visitorName"> Name </label>
             </div>
+
             <div className="input-field col s6">
-              <input id="visitor_email" type="email" className="validate"></input>
-              <label htmlFor="visitor_email" data-error="please enter an email address"> Email </label>
+              <input id="visitorEmail" type="email" className="validate" value={this.state.visitorEmail} onChange={this.changeVisitorEmail}></input>
+              <label htmlFor="visitorEmail" data-error="please enter an email address"> Email </label>
             </div>
           </div>
 
