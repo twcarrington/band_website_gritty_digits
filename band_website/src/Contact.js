@@ -5,10 +5,13 @@ export default class Contact extends Component {
     super(props);
     this.state = {
       visitorName: '',
-      visitorEmail: ''
+      visitorEmail: '',
+      emailSubject: ''
     };
 
     this.changeVisitorName = this.changeVisitorName.bind(this);
+    this.changeVisitorEmail = this.changeVisitorEmail.bind(this);
+    this.changeEmailSubject = this.changeEmailSubject.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -18,6 +21,10 @@ export default class Contact extends Component {
 
   changeVisitorEmail(event) {
     this.setState({visitorEmail: event.target.value});
+  }
+
+  changeEmailSubject(event) {
+    this.setState({emailSubject: event.target.value});
   }
 
   handleSubmit(event) {
@@ -45,8 +52,8 @@ export default class Contact extends Component {
 
           <div className="row">
             <div className="input-field col s12">
-              <input id="email_subject" type="text"></input>
-              <label htmlFor="email_subject"> Subject </label>
+              <input id="emailSubject" type="text" value={this.state.emailSubject} onChange={this.changeEmailSubject}></input>
+              <label htmlFor="emailSubject"> Subject </label>
             </div>
           </div>
 
