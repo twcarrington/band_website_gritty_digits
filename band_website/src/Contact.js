@@ -9,13 +9,13 @@ export default class Contact extends Component {
       visitorName: "",
       visitorEmail: "",
       emailSubject: "",
-      emailBody: ""
+      messageBody: ""
     };
 
     this.changeVisitorName = this.changeVisitorName.bind(this);
     this.changeVisitorEmail = this.changeVisitorEmail.bind(this);
-    this.changeEmailSubject = this.changeEmailSubject.bind(this);
-    this.changeEmailBody = this.changeEmailBody.bind(this);
+    this.changeMessageSubject = this.changeMessageSubject.bind(this);
+    this.changeMessageBody = this.changeMessageBody.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -27,12 +27,12 @@ export default class Contact extends Component {
     this.setState({visitorEmail: event.target.value});
   }
 
-  changeEmailSubject(event) {
+  changeMessageSubject(event) {
     this.setState({emailSubject: event.target.value});
   }
 
-  changeEmailBody(event) {
-    this.setState({emailBody: event.target.value});
+  changeMessageBody(event) {
+    this.setState({messageBody: event.target.value});
   }
 
   handleSubmit(event) {
@@ -41,10 +41,9 @@ export default class Contact extends Component {
       name: this.state.visitorName,
       email: this.state.visitorEmail,
       subject: this.state.emailSubject,
-      message: this.state.emailBody
+      message: this.state.messageBody
     });
   }
-
 
   render() {
     return (
@@ -66,14 +65,14 @@ export default class Contact extends Component {
 
           <div className="row">
             <div className="input-field col s12">
-              <input type="text" value={this.state.emailSubject} onChange={this.changeEmailSubject}></input>
+              <input type="text" value={this.state.emailSubject} onChange={this.changeMessageSubject}></input>
               <label> Subject </label>
             </div>
           </div>
 
           <div className="row">
             <div className="input-field col s12">
-              <textarea className="materialize-textarea validate" type="text" value={this.state.emailBody} onChange={this.changeEmailBody}></textarea>
+              <textarea className="materialize-textarea validate" type="text" value={this.state.messageBody} onChange={this.changeMessageBody}></textarea>
               <label data-error="please enter a message"> Message </label>
             </div>
           </div>
@@ -83,8 +82,6 @@ export default class Contact extends Component {
           </div>
         </form>
       </div>
-
-
     );
   }
 }
