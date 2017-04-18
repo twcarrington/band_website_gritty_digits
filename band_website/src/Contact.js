@@ -36,12 +36,12 @@ export default class Contact extends Component {
   }
 
   handleSubmit(event) {
-    event.preventDefault();
-    firebase.database().ref('/').set({
+    event.preventDefault(); 
+    firebase.database().ref('/' + this.state.visitorName).set({
       name: this.state.visitorName,
       email: this.state.visitorEmail,
       subject: this.state.emailSubject,
-      message: this.state.messageBody
+      message: this.state.messageBody,
     });
   }
 
