@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 export default class TopBar extends Component {
   render() {
     return (
-      <div className="TopBar z-depth-5 center-align">
+      <div className="TopBar center-align">
         <div>
           <h1 className="row"> The Gritty Digits </h1>
         </div>
