@@ -7,16 +7,17 @@ body {
 a {
   color: black;
   font-size: 130%;
+  -o-transition:.75s;
+  -ms-transition:.75s;
+  -moz-transition:.75s;
+  -webkit-transition:.75s;
+  transition:.75s;
 }
 
-.TopBar {
-  font-family: 'Raleway', sans-serif;
-}
+a:hover {color: #90caf9;}
 
-.TopBarItem {
-  font-family: 'Anton', sans-serif;
-}
+.TopBar {font-family: 'Raleway', sans-serif;}
 
-.parallax-container {
-  height: 1250px;
-}
+.TopBarItem {font-family: 'Anton', sans-serif;}
+
+.parallax-container {height: 1250px;}

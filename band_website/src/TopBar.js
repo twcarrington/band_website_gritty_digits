@@ -10,19 +10,19 @@ export default class TopBar extends Component {
 
         <div className="row">
           <div className="col s1"></div>
-          <div className="TopBarItem col s2 hoverable">
+          <div className="TopBarItem col s2">
             <a href="#Music"> Music </a>
           </div>
-          <div className="TopBarItem col s2 hoverable">
+          <div className="TopBarItem col s2">
             <a href="#Shows"> Shows </a>
           </div>
-          <div className="TopBarItem col s2 hoverable">
+          <div className="TopBarItem col s2">
             <a href="#Videos"> Videos </a>
           </div>
-          <div className="TopBarItem col s2 hoverable">
+          <div className="TopBarItem col s2">
             <a href="#Photos"> Photos </a>
           </div>
-          <div className="TopBarItem col s2 hoverable">
+          <div className="TopBarItem col s2">
             <a href="#Contact"> Contact </a>
           </div>
           <div className="col s1"></div>
