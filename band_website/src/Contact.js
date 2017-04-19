@@ -41,8 +41,8 @@ export default class Contact extends Component {
       name: this.state.visitorName,
       email: this.state.visitorEmail,
       subject: this.state.emailSubject,
-      message: this.state.messageBody,
-    });
+      message: this.state.messageBody
+    }).then(alert("Thanks for your feedback!"));
   }
 
   render() {
