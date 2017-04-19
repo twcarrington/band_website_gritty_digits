@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 export default class Music extends Component {
   render() {
     return (
-      <div id="Music" className="Music center-align section scrollspy">
-        <h3> music </h3>
+      <div id="Music" className="center-align section scrollspy">
+        <h3 className="componentHeader"> music </h3>
         <iframe
           width="75%"
           height="400"

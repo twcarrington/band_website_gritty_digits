@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 export default class Videos extends Component {
   render() {
     return (
-      <div id="Videos" className="Videos center-align section scrollspy">
-        <h3> videos </h3>
+      <div id="Videos" className="center-align section scrollspy">
+        <h3 className="componentHeader"> videos </h3>
         <iframe
           frameBorder='0'
           src="https://www.youtube.com/embed/hooKVstzbz0"
