@@ -36,7 +36,7 @@ export default class Contact extends Component {
   }
 
   handleSubmit(event) {
-    event.preventDefault(); 
+    event.preventDefault();
     firebase.database().ref('/' + this.state.visitorName).set({
       name: this.state.visitorName,
       email: this.state.visitorEmail,
@@ -47,8 +47,8 @@ export default class Contact extends Component {
 
   render() {
     return (
-      <div id="Contact" className="Contact container section scrollspy">
-        <h3 className="center-align"> contact us </h3>
+      <div id="Contact" className="container section scrollspy">
+        <h3 className="center-align componentHeader"> contact us </h3>
 
         <form onSubmit={this.handleSubmit} className="left-align">
           <div className="row">

@@ -4,14 +4,22 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-.TopBar {
-  font-family: 'Raleway', sans-serif;
+a {
+  color: black;
+  font-size: 130%;
+  -o-transition:.75s;
+  -ms-transition:.75s;
+  -moz-transition:.75s;
+  -webkit-transition:.75s;
+  transition:.75s;
 }
 
-.TopBarItem {
-  font-family: 'Anton', sans-serif;
-}
+a:hover {color: #90caf9;}
 
-.parallax-container {
-  height: 1250px;
-}
+.TopBar {font-family: 'Raleway', sans-serif;}
+
+.componentHeader {font-family: 'Raleway', sans-serif;}
+
+.TopBarItem {font-family: 'Rubik Mono One', sans-serif;}
+
+.parallax-container {height: 1250px;}
