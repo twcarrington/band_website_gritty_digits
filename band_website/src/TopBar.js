@@ -9,9 +9,7 @@ export default class TopBar extends Component {
         </div>
 
         <div className="row">
-          <div className="TopBarItem col s2 hoverable">
-            <a href="#Home"> Home </a>
-          </div>
+          <div className="col s1"></div>
           <div className="TopBarItem col s2 hoverable">
             <a href="#Music"> Music </a>
           </div>
@@ -27,6 +25,7 @@ export default class TopBar extends Component {
           <div className="TopBarItem col s2 hoverable">
             <a href="#Contact"> Contact </a>
           </div>
+          <div className="col s1"></div>
         </div>
       </div>
     );
