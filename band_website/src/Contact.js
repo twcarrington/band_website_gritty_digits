@@ -48,7 +48,7 @@ export default class Contact extends Component {
   render() {
     return (
       <div id="Contact" className="container section scrollspy">
-        <h3 className="center-align componentHeader"> contact us </h3>
+        <h3 className="center-align ComponentHeader"> contact us </h3>
 
         <form onSubmit={this.handleSubmit} className="left-align">
           <div className="row">
