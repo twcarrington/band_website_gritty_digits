@@ -42,7 +42,15 @@ export default class Contact extends Component {
       email: this.state.visitorEmail,
       subject: this.state.emailSubject,
       message: this.state.messageBody
-    }).then(alert("Thanks for your feedback!"));
+    }).then( () => {
+      alert("Thanks for your feedback!");
+      this.setState({
+        visitorName: "",
+        visitorEmail: "",
+        emailSubject: "",
+        messageBody: ""
+      });
+    });
   }
 
   render() {
@@ -53,8 +61,8 @@ export default class Contact extends Component {
         <form onSubmit={this.handleSubmit} className="left-align">
           <div className="row">
             <div className="input-field col s6">
-              <input type="text" value={this.state.visitorName} onChange={this.changeVisitorName}></input>
-              <label> Name </label>
+              <input type="text" className="validate" value={this.state.visitorName} onChange={this.changeVisitorName}></input>
+              <label data-error="please enter a name"> Name </label>
             </div>
 
             <div className="input-field col s6">
