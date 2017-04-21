@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Gallery from 'react-photo-gallery';
 import grittyPic from "../public/gritty_digits.jpg"
 
 
