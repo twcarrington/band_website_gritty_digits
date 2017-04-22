@@ -4,10 +4,10 @@ import grittyPic from "../public/gritty_digits.jpg"
 
 
 export default class Photos extends Component {
-  constructor () {
+  constructor() {
 		super();
 		this.state = {
-			lightboxIsOpen: false,
+			lightboxIsOpen: true,
 			currentImage: 0
 		};
 
@@ -52,19 +52,25 @@ export default class Photos extends Component {
   }
 	renderGallery () {
     const images = [
-      {src: require("../public/gritty_digits.jpg")},
-      {src: require("../public/pikmin.jpg")}
+      {src: {grittyPic}},
+      {src: require("../public/pikmin.jpg")},
+      {src: "https://upload.wikimedia.org/wikipedia/commons/4/45/GuitareClassique5.png"}
     ];
 
     const gallery = images.map((imageObject, index) => {
       return(
-        <a
-          href={imageObject.src}
-          className=""
-          key={index}
-          onClick={(e) => this.openLightbox(index, e)}  // is this even valid arrow function syntax, inside JSX?  seems like its missing brackets for the function block?
-        >
-        </a>
+        <div>
+          <a
+            href={imageObject.src}
+            className=""
+            key={index}
+            onClick={(e) => this.openLightbox(index, e)}  // is this even valid arrow function syntax, inside JSX?  seems like its missing brackets for the function block?
+          >
+            <img src={imageObject.thumbnail}/>
+            <img className="responsive-img" src={grittyPic}/>
+            <img className="responsive-img" src={grittyPic}/>            
+          </a>
+        </div>
       )
     });
 
@@ -74,10 +80,16 @@ export default class Photos extends Component {
   render() {
     return (
       <div id ="Photos" className ="center-align section scrollspy">
+        <h3 className ="ComponentHeader"> photos </h3>
         {this.renderGallery()}
         <Lightbox
 					currentImage={this.state.currentImage}
-					images={this.props.images}
+					images={[
+            {src: {grittyPic}},
+            {src: require("../public/gritty_digits.jpg")},
+            {src: require("../public/pikmin.jpg")},
+            {src: "https://upload.wikimedia.org/wikipedia/commons/4/45/GuitareClassique5.png"}
+          ]}
 					isOpen={this.state.lightboxIsOpen}
 					onClickImage={this.handleClickImage}
 					onClickNext={this.gotoNext}
@@ -85,8 +97,6 @@ export default class Photos extends Component {
 					onClickThumbnail={this.gotoImage}
 					onClose={this.closeLightbox}
 				/>
-        <h3 className ="ComponentHeader"> photos </h3>
-        <img src ={grittyPic}/>
       </div>
     );
   }
