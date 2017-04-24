@@ -6,7 +6,7 @@ export default class BackgroundImg extends Component {
     return (
       <div className="parallax-container">
         <div className="parallax">
-          <img src={grittyPic}/>
+          <img src={grittyPic} className="responsive-img"/>
         </div>
       </div>
     );
