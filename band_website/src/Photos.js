@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import grittyPic from "../public/gritty_digits.jpg";
-import pikminPic from "../public/pikmin.jpg";
+import grittyPoster from "../public/grittyPoster.jpg";
 
 export default class Photos extends Component {
   render() {
@@ -9,22 +9,21 @@ export default class Photos extends Component {
         <h3 className="ComponentHeader"> photos </h3>
         <div className="row">
 
-          <div className="col s5">
+          <div className="col l4 s6">
             <div className="card">
               <div className="card-image materialboxed">
-                <img src={pikminPic}/>
+                <img src={grittyPoster}/>
               </div>
             </div>
           </div>
 
-          <div className="col s3">
+          <div className="col l4 s6">
             <div className="card">
               <div className="card-image materialboxed">
                 <img src={grittyPic}/>
               </div>
             </div>
           </div>
-
 
         </div>
       </div>

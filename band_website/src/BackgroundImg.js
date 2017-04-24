@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import pikminPic from "../public/pikmin.jpg";
+import grittyPic from "../public/gritty_digits.jpg";
 
 export default class BackgroundImg extends Component {
   render() {
     return (
       <div className="parallax-container">
         <div className="parallax">
-          <img src={pikminPic}/>
+          <img src={grittyPic}/>
         </div>
       </div>
     );
