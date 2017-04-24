@@ -4,7 +4,7 @@ export default class Music extends Component {
   render() {
     return (
       <div id="Music" className="center-align section scrollspy">
-        <h3 className="componentHeader"> music </h3>
+        <h3 className="ComponentHeader"> music </h3>
         <iframe
           width="75%"
           height="400"

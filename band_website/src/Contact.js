@@ -37,48 +37,56 @@ export default class Contact extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    firebase.database().ref('/' + this.state.visitorName).set({
+    firebase.database().ref('/' + this.state.visitorEmail).set({
       name: this.state.visitorName,
       email: this.state.visitorEmail,
       subject: this.state.emailSubject,
-      message: this.state.messageBody,
+      message: this.state.messageBody
+    }).then( () => {
+      alert("Thanks for your feedback!");
+      this.setState({
+        visitorName: "",
+        visitorEmail: "",
+        emailSubject: "",
+        messageBody: ""
+      });
     });
   }
 
   render() {
     return (
-      <div id="Contact" className="container section scrollspy">
-        <h3 className="center-align componentHeader"> contact us </h3>
+      <div id ="Contact" className ="container section scrollspy">
+        <h3 className ="center-align ComponentHeader"> contact us </h3>
 
-        <form onSubmit={this.handleSubmit} className="left-align">
-          <div className="row">
-            <div className="input-field col s6">
-              <input type="text" value={this.state.visitorName} onChange={this.changeVisitorName}></input>
-              <label> Name </label>
+        <form onSubmit ={this.handleSubmit} className ="left-align">
+          <div className ="row">
+            <div className ="input-field col s6">
+              <input type ="text" className ="validate" value ={this.state.visitorName} onChange ={this.changeVisitorName}></input>
+              <label data-error ="please enter a name"> Name </label>
             </div>
 
-            <div className="input-field col s6">
-              <input type="email" className="validate" value={this.state.visitorEmail} onChange={this.changeVisitorEmail}></input>
-              <label data-error="please enter an email address"> Email </label>
+            <div className ="input-field col s6">
+              <input type ="email" className ="validate" value ={this.state.visitorEmail} onChange ={this.changeVisitorEmail}></input>
+              <label data-error ="please enter an email address"> Email </label>
             </div>
           </div>
 
-          <div className="row">
-            <div className="input-field col s12">
-              <input type="text" value={this.state.emailSubject} onChange={this.changeMessageSubject}></input>
+          <div className ="row">
+            <div className ="input-field col s12">
+              <input type ="text" value ={this.state.emailSubject} onChange ={this.changeMessageSubject}></input>
               <label> Subject </label>
             </div>
           </div>
 
-          <div className="row">
-            <div className="input-field col s12">
-              <textarea className="materialize-textarea validate" type="text" value={this.state.messageBody} onChange={this.changeMessageBody}></textarea>
-              <label data-error="please enter a message"> Message </label>
+          <div className ="row">
+            <div className ="input-field col s12">
+              <textarea className ="materialize-textarea validate" type ="text" value ={this.state.messageBody} onChange ={this.changeMessageBody}></textarea>
+              <label data-error ="please enter a message"> Message </label>
             </div>
           </div>
 
-          <div className="row">
-            <button className="btn waves-effect waves-light" type="submit" name="action"> Send </button>
+          <div className ="row">
+            <button className ="btn waves-effect waves-light" type ="submit" name ="action"> Send </button>
           </div>
         </form>
       </div>

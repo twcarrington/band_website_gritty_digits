@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import grittyPoster from "../public/grittyPoster.jpg";
 
 export default class TopBar extends Component {
   render() {
     return (
       <div className="TopBar center-align">
-        <div>
-          <h1 className="row"> The Gritty Digits </h1>
+        <div className="row">
+          <img src={grittyPoster}/>
         </div>
 
         <div className="row">
