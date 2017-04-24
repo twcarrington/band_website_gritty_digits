@@ -25,4 +25,9 @@ a:hover {color: #90caf9;}
 
 .coming-soon {font-family: 'Oswald', sans-serif;}
 
+.video-embed {
+  width: 100%;
+  height: 50vh;
+}
+
 .parallax-container {height: 1250px;}
