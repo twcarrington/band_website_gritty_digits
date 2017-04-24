@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
-  background-color: #f44336;  
+  background-color: #f44336;
 }
 
 a {
@@ -22,5 +22,7 @@ a:hover {color: #90caf9;}
 .ComponentHeader {font-family: 'Raleway', sans-serif;}
 
 .TopBarItem {font-family: 'Rubik Mono One', sans-serif;}
+
+.coming-soon {font-family: 'Oswald', sans-serif;}
 
 .parallax-container {height: 1250px;}
